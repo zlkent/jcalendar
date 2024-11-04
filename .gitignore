@@ -3,9 +3,11 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
-./include/*
-./lib/*
-./src/*
-./test/*
-./platformio.ini
+.vscode/*
+/include/*
+/lib/*
+/src/*
+/test/*
+platformio.ini
 extra_script.py
+.DS_Store
