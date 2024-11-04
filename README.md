@@ -24,6 +24,15 @@
     * LED->22(板载)
 2. 三色墨水屏排线插入时注意针脚方向,屏幕排线和驱动板排线1号针脚均是悬空,注意对齐。
 3. 电池接口需要是ph2.0,且注意正负极(开发板上有标注),如果电池的正负极反了,可以用镊子调整电池插头。
+4. 烧录固件<br>
+    使用ESP32的烧录工具flash_download_tool烧录固件
+    1. 选择烧录的文件和烧录地址（bootloader.bin与partitions.bin烧录过一次后，就不需要重复烧录了）
+    2. 选择Flash的配置信息
+    3. 选择连接的串口以及波特率（波特率可以根据实际情况调整）
+    4. 擦除Flash。
+    5. 开始烧录。<br>
+    （参考下图）<br>
+    <img src="./assets/img/flash_download_tool_guide.png" width="50%">
 
 ## Button Operation Guide:
 1. **单点**  
@@ -67,5 +76,5 @@
 
 <br>
 <br>
- Copyright © 2022-2024 JADE Software Co., Ltd. All Rights Reserved.
+ Copyright © 2022-2024. All Rights Reserved.
 
