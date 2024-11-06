@@ -1,9 +1,11 @@
 # J-Calendar
-墨水屏日历，采用三色4.2寸墨水屏，展示基本月历信息，支持农历、公共假期、倒计日展示。<br>
-注：个人可免费下载固件使用，禁止商用。
+墨水屏日历，采用三色4.2寸墨水屏，展示基本月历信息，支持农历、公共假期（TODO）、倒计日展示。<br>
+低难度、低成本制作。<br>
+<img src="./assets/img/sample.jpg" width="60%"><br>
+注：固件仅供个人下载免费使用，禁止商用。
 
 ## Prepare & Meterial
-1. esp32开发板(建议lolin32 lite,其他esp32开发板亦可)
+1. esp32开发板(建议lolin32 lite,其他esp32开发板亦可)<br>
 2. 4.2寸三色墨水屏(400*300)。
 3. 墨水屏驱动板。
 4. 锂电池,需要做ph2.0接头。(建议603048, 900mah)
@@ -12,27 +14,31 @@
 7. 工具:电烙铁、电线若干。
 
 ## Manufacture Guide:
-1. 接线
-    * Busy->4
-    * RST->16
-    * DC->17
-    * CS->5
-    * SCK->18
-    * SDA->23
-    * GND->GND
-    * VCC->3V
-    * LED->22(板载)
+1. 开发板接线<br>
+    * 墨水屏驱动板
+        * Busy->4
+        * RST->16
+        * DC->17
+        * CS->5
+        * SCK->18
+        * SDA->23
+        * GND->GND
+        * VCC->3V
+    * 其他
+        * 按钮->(PIN_14, VCC)
+        * LED->22(板载)
 2. 三色墨水屏排线插入时注意针脚方向,屏幕排线和驱动板排线1号针脚均是悬空,注意对齐。
 3. 电池接口需要是ph2.0,且注意正负极(开发板上有标注),如果电池的正负极反了,可以用镊子调整电池插头。
 4. 烧录固件<br>
-    使用ESP32的烧录工具flash_download_tool烧录固件
+    使用ESP32的烧录工具flash_download_tool烧录固件. [Flash Download Tools](https://www.espressif.com/en/support/download/other-tools?keys=flash+download+tools)
     1. 选择烧录的文件和烧录地址（bootloader.bin与partitions.bin烧录过一次后，就不需要重复烧录了）
     2. 选择Flash的配置信息
     3. 选择连接的串口以及波特率（波特率可以根据实际情况调整）
     4. 擦除Flash。
     5. 开始烧录。<br>
     （参考下图）<br>
-    <img src="./assets/img/flash_download_tool_guide.png" width="50%">
+    <img src="./assets/img/flash_download_tool_guide.png" width="70%">
+5. 安装盒，3D打印，用PLA或ABS均可。[E-ink box2 v22.3mf](./assets/file/E-ink%20box2%20v22.3mf)
 
 ## Button Operation Guide:
 1. **单点**  
@@ -57,7 +63,7 @@
 1. Config Wifi. Wifi配置  
     进入配置wifi页面,选择搜索到的ap,并输入密码,并保存。
 2. Setup. 系统配置  
-    和风天气:输入和风天气的token和城市id(城市对应的id请在和风天气的官网查找。)系统会每2小时刷新当前天气,如果token置空,天气将不会被刷新,系统每日凌晨0点刷新日历。  
+    和风天气:输入和风天气的token和城市id(城市对应的id请在和风天气的官网查找。)系统会每2小时刷新当前天气,如果token置空,天气将不会被刷新,系统每日凌晨0点刷新日历。[城市id列表](./assets/file/China-City-List-latest.csv) <br>
     倒数日:输入倒数日名称和日期,名称不能超过4个中文字符,时间以yyyyMMdd的格式填入。配置正确的话,日历每天会显示倒数“距****还有**天”。如果倒数日名称为空,系统将不显示倒数日信息。
 3. Update. OTA升级  
     此项需要在浏览器内完成,通过ip地址访问配置页面,然后进入Update,选择固件文件后上传,等待。刷新完成后,页面会有成功提示。
@@ -73,8 +79,7 @@
 2. \<GxEPD2\> https://github.com/ZinggJM/GxEPD2
 3. \<U8g2_for_Adafruit_GFX\> https://github.com/olikraus/U8g2_for_Adafruit_GFX
 4. \<和风天气\> https://dev.qweather.com/docs/api/weather/weather-now/
-
 <br>
 <br>
- Copyright © 2022-2024. All Rights Reserved.
+ Copyright © 2023-2024. All Rights Reserved.
 
