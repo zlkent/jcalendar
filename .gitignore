@@ -6,5 +6,6 @@
 /src/*
 /test/*
 platformio.ini
-extra_script.py
+*.py
+*.csv
 .DS_Store
