@@ -2,6 +2,7 @@
 墨水屏日历，采用三色4.2寸墨水屏，展示基本月历信息，支持农历、公共假期、倒计日、天气（实时天气、每日天气）展示。<br>
 项目以低难度、低成本的方式，方便爱好者实现属于自己的低功耗月历。<br>
 <img src="./assets/img/sample.jpg" width="60%"><br>
+Bilibili连接：https://www.bilibili.com/video/BV1wHDhYoE3G/<br>
 注：固件仅供个人下载免费使用，禁止商用。
 
 ## Prepare & Meterial
@@ -141,11 +142,14 @@ A: 从经验上预估，SES的拆机屏选z21，比较新一些的选z98，如�
 * 基本功能
 * 功耗优化等
 
+### ★★★固件还不错，请这老小子喝杯咖啡吧★★★
+<img src="./assets/img/buymeacoffee.jpg" width="30%"><br>
+
 ## Reference:
 1. \<WEMOS LOLIN32簡介\> https://swf.com.tw/?p=1331&cpage=1
 2. \<GxEPD2\> https://github.com/ZinggJM/GxEPD2
 3. \<U8g2_for_Adafruit_GFX\> https://github.com/olikraus/U8g2_for_Adafruit_GFX
 4. \<和风天气\> https://dev.qweather.com/docs/api/weather/weather-now/
 <br>
- Copyright © 2023-2024. All Rights Reserved.
+ Copyright © 2023-2025. All Rights Reserved.
 
