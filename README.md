@@ -107,6 +107,8 @@ A: 1. 检查USB线连接是否正常。 <br>2. app的串口下拉框里是否检
 A: 1. 换根质量较好的或短一些的USB线，或换个USB口插入。 <br>2. 可以将刷新的波特率降低一点，如选择速率低一点的115200。
 
 ## Releases
+### 1.0.21
+* Fix: bug (wrong background color of calender header).
 ### 1.0.20
 * Fix: bugs.
 ### 1.0.19
