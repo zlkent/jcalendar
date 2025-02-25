@@ -37,6 +37,7 @@ Bilibili连接：https://www.bilibili.com/video/BV1wHDhYoE3G/<br>
     3. 选择连接的串口以及波特率（波特率可以根据实际情况调整）
     4. 擦除Flash。
     5. 开始烧录。<br>
+    <span style="color:red">注：文件前面一定要打勾，否则不会刷进flash的！！！</span><br>
     （参考下图）<br>
     <img src="./assets/img/flash_download_tool_guide.png" width="70%">
 5. 安装盒，3D打印，用PLA或ABS均可。[E-ink box2 v22.3mf](./assets/file/E-ink%20box2%20v22.3mf)
@@ -105,8 +106,13 @@ A: 从经验上预估，SES的拆机屏选z21，比较新一些的选z98，如�
 A: 1. 检查USB线连接是否正常。 <br>2. app的串口下拉框里是否检测到COM口。 <br>3. 把其他串口工具关闭，防止占用COM口。
 6. Q: 刷新固件的过程中提示报错。<br>
 A: 1. 换根质量较好的或短一些的USB线，或换个USB口插入。 <br>2. 可以将刷新的波特率降低一点，如选择速率低一点的115200。
+7. Q: 刷新固件后，需要重新配置吗？
+A: 仅刷新app固件后，配置是保留的，所以，无需重新配置。如果刷新了分区表partition.bin，会将esp的nvs区刷新，这时候需要重新配置。
 
 ## Releases
+### 1.0.22
+* 项目开源：此项目使用GNU General Public License v3.0许可证授权。详情请参阅LICENSE文件。
+* Refine：农历计算功能移出。（农历功能作为独立库，以MIT协议开源）
 ### 1.0.21
 * Fix: bug (wrong background color of calender header).
 ### 1.0.20
@@ -156,8 +162,12 @@ A: 1. 换根质量较好的或短一些的USB线，或换个USB口插入。 <br>
 * 基本功能
 * 功耗优化等
 
-### ★★★固件还不错，请这老小子喝杯咖啡吧★★★
-<img src="./assets/img/buymeacoffee.jpg" width="30%"><br>
+## License
+此项目使用GNU General Public License v3.0许可证授权。详情请参阅LICENSE文件。
+
+### ★★★固件还不错，支持一下★★★
+<img src="./assets/img/buymeacoffee.jpg" width="32.9%">
+<img src="./assets/img/likeit.jpg" width="30%"><br>
 
 ## Reference:
 1. \<WEMOS LOLIN32簡介\> https://swf.com.tw/?p=1331&cpage=1
@@ -166,4 +176,3 @@ A: 1. 换根质量较好的或短一些的USB线，或换个USB口插入。 <br>
 4. \<和风天气\> https://dev.qweather.com/docs/api/weather/weather-now/
 <br>
  Copyright © 2023-2025. All Rights Reserved.
-
