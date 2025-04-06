@@ -232,7 +232,7 @@ void buttonDoubleClick(void* oneButton) {
     pref.end();
 
     para_qweather_key.setValue(qToken.c_str(), 32);
-    para_qweather_location.setValue(qLoc.c_str(), 9);
+    para_qweather_location.setValue(qLoc.c_str(), 64);
     para_qweather_type.setValue(qType.c_str(), 1);
     para_cd_day_label.setValue(cddLabel.c_str(), 16);
     para_cd_day_date.setValue(cddDate.c_str(), 8);
