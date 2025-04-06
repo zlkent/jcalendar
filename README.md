@@ -110,6 +110,9 @@ A: 1. 换根质量较好的或短一些的USB线，或换个USB口插入。 <br>
 A: 仅刷新app固件后，配置是保留的，所以，无需重新配置。如果刷新了分区表partition.bin，会将esp的nvs区刷新，这时候需要重新配置。
 
 ## Releases
+### 1.0.23
+* Refine: 修改和风天气请求url。
+* Fix: bug(获取holiday返回码)。
 ### 1.0.22
 * 项目开源：此项目使用GNU General Public License v3.0许可证授权。详情请参阅LICENSE文件。
 * Refine：农历计算功能移出。（农历功能作为独立库，以MIT协议开源）

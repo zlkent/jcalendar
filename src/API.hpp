@@ -166,7 +166,7 @@ public:
     bool getWeatherNow(Weather& result, const char* key, const char* locid) {
         // return getRestfulAPI("https://www.baidu.com", [&result](JsonDocument& json) {
         return getRestfulAPI(
-            "https://devapi.qweather.com/v7/weather/now?key=" + String(key) + "&location=" + String(locid), [&result](JsonDocument& json) {
+            "https://api.qweather.com/v7/weather/now?key=" + String(key) + "&location=" + String(locid), [&result](JsonDocument& json) {
                 if (strcmp(json["code"], "200") != 0) {
                     Serial.print(F("Get weather failed, error: "));
                     Serial.println(json["code"].as<const char*>());
@@ -189,7 +189,7 @@ public:
 
     // 和风天气 - 逐小时天气预报: https://dev.qweather.com/docs/api/weather/weather-hourly-forecast/
     bool getForecastHourly(HourlyForecast& result, const char* key, const char* locid) {
-        return getRestfulAPI("https://devapi.qweather.com/v7/weather/24h?key=" + String(key) + "&location=" + String(locid), [&result](JsonDocument& json) {
+        return getRestfulAPI("https://api.qweather.com/v7/weather/24h?key=" + String(key) + "&location=" + String(locid), [&result](JsonDocument& json) {
             if (strcmp(json["code"], "200") != 0) {
                 Serial.print(F("Get hourly forecast failed, error: "));
                 Serial.println(json["code"].as<const char*>());
@@ -217,7 +217,7 @@ public:
 
     // 和风天气 - 逐天天气预报: https://dev.qweather.com/docs/api/weather/weather-daily-forecast/
     bool getForecastDaily(DailyForecast& result, const char* key, const char* locid) {
-        return getRestfulAPI("https://devapi.qweather.com/v7/weather/3d?key=" + String(key) + "&location=" + String(locid), [&result](JsonDocument& json) {
+        return getRestfulAPI("https://api.qweather.com/v7/weather/3d?key=" + String(key) + "&location=" + String(locid), [&result](JsonDocument& json) {
             if (strcmp(json["code"], "200") != 0) {
                 Serial.print(F("Get daily forecast failed, error: "));
                 Serial.println(json["code"].as<const char*>());
