@@ -19,9 +19,9 @@
 
 // select the display class (only one), matching the kind of display panel
 //#define GxEPD2_DISPLAY_CLASS GxEPD2_BW
-#define GxEPD2_DISPLAY_CLASS GxEPD2_3C
+//#define GxEPD2_DISPLAY_CLASS GxEPD2_3C
 //#define GxEPD2_DISPLAY_CLASS GxEPD2_4C
-//#define GxEPD2_DISPLAY_CLASS GxEPD2_7C
+#define GxEPD2_DISPLAY_CLASS GxEPD2_7C
 
 // 脚本编译需要，根据命令行参数编译不同版本固件。
 #if defined(SI_DRIVER)
@@ -31,6 +31,8 @@
         #define GxEPD2_DRIVER_CLASS GxEPD2_420c_Z21
     #elif (SI_DRIVER == 98)
         #define GxEPD2_DRIVER_CLASS GxEPD2_420c_GDEY042Z98
+    #elif (SI_DRIVER == 730)
+        #define GxEPD2_DRIVER_CLASS GxEPD2_730c_GDEY073D46
     #endif
 #endif
 
@@ -38,7 +40,7 @@
 #ifndef GxEPD2_DRIVER_CLASS
 // #define GxEPD2_DRIVER_CLASS GxEPD2_420c // Z15
 // #define GxEPD2_DRIVER_CLASS GxEPD2_420c_Z21 // Z21
-#define GxEPD2_DRIVER_CLASS GxEPD2_420c_GDEY042Z98 // Z98
+#define GxEPD2_DRIVER_CLASS GxEPD2_730c_GDEY073D46
 #endif
 
 // select the display driver class (only one) for your  panel
